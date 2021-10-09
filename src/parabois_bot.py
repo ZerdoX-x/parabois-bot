@@ -61,6 +61,23 @@ async def leave(ctx):
     server = ctx.message.guild.voice_client
     await server.disconnect()
 
+@client.command()
+async def pause(ctx):
+    """Pause current track"""
+    if ctx.voice_client.is_playing():
+        ctx.voice_client.pause()
+        await ctx.send('Paused :pause_button:')
+    else:
+        await ctx.send('No playing audio, at the moment')
+
+@client.command()
+async def resume(ctx):
+    """Resume current track"""
+    if ctx.voice_client.is_paused():
+        ctx.voice_client.resume()
+        await ctx.send('Resume :arrow_forward:')
+    else:
+        await ctx.send('No song paused, at the moment')
 
 def main():
     """Start bot"""
