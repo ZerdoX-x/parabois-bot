@@ -9,4 +9,4 @@ in progress...
 2. `cd parabois-bot`
 3. Create `.env` file by copying `.env.example`. Paste your bot's token here
 4. Install dependencies: `poetry install`
-5. Run bot: `poetry run python main.py`
+5. Run bot: `poetry run start`
