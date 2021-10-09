@@ -8,10 +8,11 @@ import discord
 
 load_dotenv()
 token = getenv("TOKEN")
-print(token)
+if not token:
+    raise NameError("Token env variable is not defined")
+
 
 client = discord.Client()
-
 
 @client.event
 async def on_ready():
