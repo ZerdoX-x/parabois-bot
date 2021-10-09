@@ -12,10 +12,11 @@ from discord.ext import commands
 
 load_dotenv()
 TOKEN = getenv("TOKEN")
+PREFIX = getenv("PREFIX")
 if not TOKEN:
     raise NameError("Token env variable is not defined")
 
-client = commands.Bot(command_prefix='.')
+client = commands.Bot(command_prefix=PREFIX or '..')
 
 
 @client.event
