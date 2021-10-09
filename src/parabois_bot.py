@@ -24,14 +24,6 @@ async def on_ready():
     """Login handler"""
     print(f"Logged in as {client.user}")
 
-
-@client.command()
-async def join(ctx):
-    """Join voice channel"""
-    channel = ctx.author.voice.channel
-    await channel.connect()
-
-
 FFMPEG_OPTIONS = {
     "before_options": """
         -reconnect 1
@@ -53,6 +45,13 @@ async def play(ctx, url):
         url = info['formats'][0]['url']
         source = \
             await discord.FFmpegOpusAudio.from_probe(url, **FFMPEG_OPTIONS)
+        try:
+            if not ctx.voice_client.is_connected():
+                pass
+        except AttributeError:
+            channel = ctx.author.voice.channel
+            await channel.connect()
+
         ctx.voice_client.play(source)
 
 
