@@ -9,6 +9,8 @@ license = "MIT"
 python = "^3.9"
 discord = "^1.7.3"
 python-dotenv = "^0.19.0"
+Flask = "^2.0.2"
+waitress = "^2.0.0"
 
 [tool.poetry.dev-dependencies]
 pylint = "^2.11.1"

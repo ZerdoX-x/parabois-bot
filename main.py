@@ -5,6 +5,7 @@ Parabois bot
 from os import getenv
 from dotenv import load_dotenv
 import discord
+from keep_bot_alive import keep_alive
 
 load_dotenv()
 token = getenv("TOKEN")
@@ -27,4 +28,5 @@ async def on_message(message):
     if message.content.startswith("+test"):
         await message.channel.send("I am alive!")
 
+keep_alive()
 client.run(token)
