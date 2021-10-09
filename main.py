@@ -28,5 +28,9 @@ async def on_message(message):
     if message.content.startswith("+test"):
         await message.channel.send("I am alive!")
 
-keep_alive()
-client.run(token)
+def app():
+    """Start bot"""
+    keep_alive()
+    client.run(token)
+
+app()
