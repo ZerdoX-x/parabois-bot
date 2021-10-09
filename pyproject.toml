@@ -6,7 +6,7 @@ authors = ["ZerdoX-x <zerdox.cool4@gmail.com>"]
 license = "MIT"
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.8"
 discord = "^1.7.3"
 python-dotenv = "^0.19.0"
 Flask = "^2.0.2"
