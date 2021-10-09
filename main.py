@@ -5,7 +5,6 @@ Parabois bot
 from os import getenv
 from dotenv import load_dotenv
 import discord
-from keep_bot_alive import keep_alive
 
 load_dotenv()
 token = getenv("TOKEN")
@@ -30,7 +29,6 @@ async def on_message(message):
 
 def app():
     """Start bot"""
-    keep_alive()
     client.run(token)
 
 app()
