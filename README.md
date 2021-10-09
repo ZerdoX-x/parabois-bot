@@ -4,7 +4,7 @@
 in progress...
 
 ## How to run bot locally
-0. You will need [python](https://www.python.org/) and [poetry](https://python-poetry.org/) installed
+0. You will need [python](https://www.python.org/), [poetry](https://python-poetry.org/) and [ffmpeg](https://www.ffmpeg.org/) installed
 1. Clone repository: `git clone https://github.com/ZerdoX-x/parabois-bot.git`
 2. `cd parabois-bot`
 3. Create `.env` file by copying `.env.example`. Paste your bot's token here
